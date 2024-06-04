@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Floor
   - death
+  - Food
   layers:
   - Default
   - TransparentFX
