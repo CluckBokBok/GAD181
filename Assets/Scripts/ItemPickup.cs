@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.SearchService;
 using UnityEngine;
 
 public class ItemPickup : MonoBehaviour
@@ -24,9 +25,14 @@ public class ItemPickup : MonoBehaviour
             Destroy(Pickedup.gameObject); // destroys the object that came in contact
             Debug.Log("Player picked up a " + Pickedup.gameObject.GetComponent<FoodInfo>().foodName + "!"); // debugs the specific food that has been picked up
         }
+        /////else if (Pickedup.gameObject.tag == "Meat")
+        //{
+        //    Destroy(Pickedup.gameObject); // destroys the object that came in contact
+        //    Debug.Log("Player picked up a " + Pickedup.gameObject.GetComponent<FoodInfo>().foodName + "!"); // debugs the specific food that has been picked 
+        //    Scene.lo
+        //}
+       
 
 
-
-        
     }
 }
