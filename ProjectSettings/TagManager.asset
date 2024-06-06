@@ -7,6 +7,8 @@ TagManager:
   - Floor
   - death
   - Food
+  - LifeLost
+  - EndPoint
   layers:
   - Default
   - TransparentFX

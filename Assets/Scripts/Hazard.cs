@@ -27,7 +27,7 @@ public class Hazard : MonoBehaviour
             transform.position = Vector3.Lerp(pointA, pointB, moveSpeed);
         }
 
-        Destroy(hazard);
-        yield return null;
+        //Destroy(hazard);
+        //yield return null;
     }
 }
