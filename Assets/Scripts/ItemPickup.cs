@@ -9,6 +9,10 @@ public class ItemPickup : MonoBehaviour
     public int playerLives; // default players lives should be set to 3
     public int playerScore; // should be 0 at the start
     public int scoreRequiredToWin; // score needed to win
+    public bool excessScore = true;
+    public GameObject LevelPass;
+    public GameObject LevelFail;
+    public GameObject WinObject;
 
     // Start is called before the first frame update
     void Start()
@@ -21,11 +25,21 @@ public class ItemPickup : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (playerLives <= 0)
+        {
+            LevelFail.SetActive(true);
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D Pickedup)
     {
+        if (playerScore >= scoreRequiredToWin)
+        {
+            Debug.Log("potato");
+            Instantiate(WinObject, new Vector3(-8.43f, 0.47f, -0.067f), Quaternion.Euler(0, 0, 0));
+            excessScore = false;
+
+        }
 
         if (Pickedup.gameObject.tag == "Food") // checks for "food" tag on the collided object
         {                        
@@ -42,6 +56,11 @@ public class ItemPickup : MonoBehaviour
             {
                 Debug.Log("Are you sure your a rat?");
             }
+                    if (playerScore >= scoreRequiredToWin)
+        {
+                LevelPass.SetActive(true);
+        }
+
 
         }
 
@@ -62,6 +81,7 @@ public class ItemPickup : MonoBehaviour
             }
             
         }
+
 
         
         // IGNORE

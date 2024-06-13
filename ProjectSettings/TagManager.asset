@@ -9,6 +9,8 @@ TagManager:
   - Food
   - LifeLost
   - EndPoint
+  - LevelFail
+  - LevelPass
   layers:
   - Default
   - TransparentFX
