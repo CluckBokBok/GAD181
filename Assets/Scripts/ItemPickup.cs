@@ -9,15 +9,16 @@ public class ItemPickup : MonoBehaviour
     public int playerLives; // default players lives should be set to 3
     public int playerScore; // should be 0 at the start
     public int scoreRequiredToWin; // score needed to win
-    public bool excessScore = true;
+    public bool excessScore;
     public GameObject LevelPass;
     public GameObject LevelFail;
     public GameObject WinObject;
+    public GameObject CountdownText;
 
     // Start is called before the first frame update
     void Start()
     {
-       
+        excessScore = true;
         playerLives = 3; // current players lives
         scoreRequiredToWin = 5; // NOT USED YET ---------
     }
@@ -33,7 +34,7 @@ public class ItemPickup : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D Pickedup)
     {
-        if (playerScore >= scoreRequiredToWin)
+        if (playerScore >= scoreRequiredToWin && excessScore == true)
         {
             Debug.Log("potato");
             Instantiate(WinObject, new Vector3(-8.43f, 0.47f, -0.067f), Quaternion.Euler(0, 0, 0));
@@ -52,14 +53,14 @@ public class ItemPickup : MonoBehaviour
         {
             Destroy(Pickedup.gameObject);
             Debug.Log("Player picked up end point object.");
-            if (playerScore == 0)
+
+            if (playerScore >= scoreRequiredToWin)
             {
-                Debug.Log("Are you sure your a rat?");
-            }
-                    if (playerScore >= scoreRequiredToWin)
-        {
                 LevelPass.SetActive(true);
-        }
+                CountdownText.gameObject.GetComponent<Countdown>().timerText.gameObject.SetActive(false);
+
+
+            }
 
 
         }
