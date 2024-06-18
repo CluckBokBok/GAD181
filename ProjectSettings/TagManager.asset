@@ -12,6 +12,9 @@ TagManager:
   - LevelFail
   - LevelPass
   - InstructionsPanel
+  - LivesThree
+  - LivesTwo
+  - LivesOne
   layers:
   - Default
   - TransparentFX

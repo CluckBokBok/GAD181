@@ -14,6 +14,9 @@ public class ItemPickup : MonoBehaviour
     public GameObject LevelFail;
     public GameObject WinObject;
     public GameObject CountdownText;
+    public GameObject LivesThree;
+    public GameObject LivesTwo;
+    public GameObject LivesOne;
 
     // Start is called before the first frame update
     void Start()
@@ -30,6 +33,8 @@ public class ItemPickup : MonoBehaviour
         {
             LevelFail.SetActive(true);
         }
+
+        PlayerHealthBar(); 
     }
 
     private void OnTriggerEnter2D(Collider2D Pickedup)
@@ -84,6 +89,7 @@ public class ItemPickup : MonoBehaviour
         }
 
 
+
         
         // IGNORE
         //else if (Pickedup.gameObject.tag == "Meat")
@@ -95,5 +101,27 @@ public class ItemPickup : MonoBehaviour
 
 
 
+    }
+
+    public void PlayerHealthBar()
+    {
+        if (playerLives >= 3)
+        {
+            LivesThree.SetActive(true);
+        }
+        if (playerLives == 2)
+        {
+            LivesThree.SetActive(false);
+            LivesTwo.SetActive(true);
+        }
+        if (playerLives == 1)
+        {
+            LivesTwo.SetActive(false);
+            LivesOne.SetActive(true);
+        }
+        if (playerLives <= 0)
+        {
+            LivesOne.SetActive(false);
+        }
     }
 }
