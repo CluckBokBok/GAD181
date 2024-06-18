@@ -11,6 +11,7 @@ TagManager:
   - EndPoint
   - LevelFail
   - LevelPass
+  - InstructionsPanel
   layers:
   - Default
   - TransparentFX
