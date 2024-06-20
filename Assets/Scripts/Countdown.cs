@@ -16,7 +16,7 @@ public class Countdown : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        timeToCountdown = 30;
+        timeToCountdown = 45;
         timeCountdown = timeToCountdown;
         countingDown = true;
         StartCoroutine(timerStart());
@@ -29,7 +29,7 @@ public class Countdown : MonoBehaviour
     }
     IEnumerator timerStart()
     {
-        timeCountdown = timeToCountdown;
+
         countingDown = true;
         while (timeCountdown > 0 && countingDown == true)
         {
@@ -45,6 +45,13 @@ public class Countdown : MonoBehaviour
             LevelFail.SetActive(true);
         }
         
+
+    }
+
+    public void resumeTimer()
+    {
+        StartCoroutine(timerStart());
+        Debug.Log("resumed timer");
     }
         
 }

@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
-using UnityEditor.SearchService;
 using UnityEngine;
 
 public class ItemPickup : MonoBehaviour
@@ -23,7 +22,7 @@ public class ItemPickup : MonoBehaviour
     {
         excessScore = true;
         playerLives = 3; // current players lives
-        scoreRequiredToWin = 5; // NOT USED YET ---------
+        scoreRequiredToWin = 7; 
     }
 
     // Update is called once per frame
@@ -74,7 +73,6 @@ public class ItemPickup : MonoBehaviour
         {
             Destroy(Pickedup.gameObject); // nick (this code is repeated but is required to function as of now)
             playerLives += -1; // removes one life from the player
-            playerScore += -1; // removes one score from the players
             if (playerLives > 0)
             {
                 Debug.Log("Player has lost 1 life.");
