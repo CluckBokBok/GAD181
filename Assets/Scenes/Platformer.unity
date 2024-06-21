@@ -3032,6 +3032,10 @@ PrefabInstance:
       value: EndPoint
       objectReference: {fileID: 0}
     - target: {fileID: 7625041006187469491, guid: 8f5e05d85eae4b9409ad4453cef3b4ac, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: f6236aaa911a13f4da05e981d87ed2b5, type: 3}
+    - target: {fileID: 7625041006187469491, guid: 8f5e05d85eae4b9409ad4453cef3b4ac, type: 3}
       propertyPath: m_Color.b
       value: 0.2028302
       objectReference: {fileID: 0}
@@ -3044,12 +3048,20 @@ PrefabInstance:
       value: 0.93399006
       objectReference: {fileID: 0}
     - target: {fileID: 8423697814834336607, guid: 8f5e05d85eae4b9409ad4453cef3b4ac, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.08472
+      objectReference: {fileID: 0}
+    - target: {fileID: 8423697814834336607, guid: 8f5e05d85eae4b9409ad4453cef3b4ac, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.09232
+      objectReference: {fileID: 0}
+    - target: {fileID: 8423697814834336607, guid: 8f5e05d85eae4b9409ad4453cef3b4ac, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -12.02
+      value: -10.54
       objectReference: {fileID: 0}
     - target: {fileID: 8423697814834336607, guid: 8f5e05d85eae4b9409ad4453cef3b4ac, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.44
+      value: 0.72
       objectReference: {fileID: 0}
     - target: {fileID: 8423697814834336607, guid: 8f5e05d85eae4b9409ad4453cef3b4ac, type: 3}
       propertyPath: m_LocalPosition.z
