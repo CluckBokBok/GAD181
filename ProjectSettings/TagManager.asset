@@ -15,6 +15,7 @@ TagManager:
   - LivesThree
   - LivesTwo
   - LivesOne
+  - GFood
   layers:
   - Default
   - TransparentFX
