@@ -6145,9 +6145,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2011729085}
+  - component: {fileID: 2011729088}
   - component: {fileID: 2011729087}
   - component: {fileID: 2011729086}
-  - component: {fileID: 2011729088}
   m_Layer: 5
   m_Name: Countdown Timer NUMBER
   m_TagString: Untagged
@@ -6290,7 +6290,7 @@ MonoBehaviour:
   countingDown: 0
   timerText: {fileID: 2011729086}
   LevelFail: {fileID: 485873662}
-  timeToCountdown: 0
+  timeToCountdown: 45
 --- !u!4 &2012533374 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9109019242536018717, guid: 211359a2e87827342817b7f0b5891002, type: 3}

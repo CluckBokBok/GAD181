@@ -8,18 +8,25 @@ public class Countdown : MonoBehaviour
 {
     public int timeCountdown;
     public bool countingDown;
-    public TextMeshProUGUI timerText;
-    public GameObject LevelFail;
-    public int timeToCountdown;
+    public TextMeshProUGUI timerText; // timer UI
+    public GameObject LevelFail; // fail UI
+    public int timeToCountdown; // change in inspector for timer duration
     
 
     // Start is called before the first frame update
     void Start()
     {
-        timeToCountdown = 45;
+       
         timeCountdown = timeToCountdown;
         countingDown = true;
-        StartCoroutine(timerStart());
+        StartCoroutine(timerStart()); // starts timer
+
+        if (LevelFail == null) // checks for level fail UI
+        {
+            Debug.Log("Cannot find Level Fail. (Countdown.cs)");
+        }
+        
+
     }
 
     // Update is called once per frame
@@ -27,7 +34,7 @@ public class Countdown : MonoBehaviour
     {
         
     }
-    IEnumerator timerStart()
+    IEnumerator timerStart() // the timer
     {
 
         countingDown = true;
@@ -42,13 +49,20 @@ public class Countdown : MonoBehaviour
         {
             yield return new WaitForSeconds(1f);
             timerText.gameObject.SetActive(false);
-            LevelFail.SetActive(true);
+
+            if (LevelFail != null)
+            {
+                LevelFail.SetActive(true);
+            }
+
+
+
         }
         
 
     }
 
-    public void resumeTimer()
+    public void resumeTimer() // set countingdown false and use this function to resume timer
     {
         StartCoroutine(timerStart());
         Debug.Log("resumed timer");
