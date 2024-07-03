@@ -583,7 +583,7 @@ MonoBehaviour:
   countingDown: 0
   timerText: {fileID: 470248269}
   LevelFail: {fileID: 0}
-  timeToCountdown: 60
+  timeToCountdown: 45
 --- !u!114 &470248269
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -865,7 +865,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 904fab49a1b9e274e913e315384b9b17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  foodItems:
+  mainFoodItems:
   - {fileID: 8067778829596728548, guid: 4a0855deef832dc4f8a9758d841c285c, type: 3}
   - {fileID: 666431814999374969, guid: 2768025672ad05a47bacd6d08659bd76, type: 3}
   - {fileID: 1945467088081876278, guid: 0a7d5697efeeca941b8f2d6b009fae59, type: 3}
@@ -873,6 +873,8 @@ MonoBehaviour:
   - {fileID: 6603362324878880201, guid: 365ed916a04ce714cbaf952dfaf4d020, type: 3}
   - {fileID: 4141924512631804573, guid: 63fe8b039664aab43bcbb9875ff3fdaa, type: 3}
   - {fileID: 8519103461837359820, guid: b2477efba50a45d4c9d0240a57438c2c, type: 3}
+  gameActive: 0
+  fruitSpawnPerSecond: 0
 --- !u!4 &798025464
 Transform:
   m_ObjectHideFlags: 0

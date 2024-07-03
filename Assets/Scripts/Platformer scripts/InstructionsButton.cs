@@ -26,7 +26,10 @@ public class InstructionsButton : MonoBehaviour
     {
        
             InstructionsPanel.SetActive(true);
-            countDown.countingDown = false;
+
+        Time.timeScale = 0; // pauses game // 0 = pause, 1 = default speed, 2 = double speed
+
+            // countDown.countingDown = false;
             Debug.Log("time stopped"); 
 
     }
@@ -34,7 +37,10 @@ public class InstructionsButton : MonoBehaviour
     public void CloseButtonPress()
     {
         InstructionsPanel.SetActive(false);
-        countDown.GetComponent<Countdown>().resumeTimer();
+
+        Time.timeScale = 1; // resumes game
+
+        //countDown.GetComponent<Countdown>().resumeTimer();
 
 
         Debug.Log("Panel Closed");
