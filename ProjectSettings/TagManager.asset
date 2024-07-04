@@ -16,6 +16,8 @@ TagManager:
   - LivesTwo
   - LivesOne
   - GFood
+  - Good Timer
+  - Bad Timer
   layers:
   - Default
   - TransparentFX

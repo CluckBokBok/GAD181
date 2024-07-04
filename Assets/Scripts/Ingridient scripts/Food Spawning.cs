@@ -5,6 +5,9 @@ using UnityEngine;
 public class FoodSpawning : MonoBehaviour
 {
     [SerializeField] private GameObject[] mainFoodItems = new GameObject[7]; // drag items in the inspector
+    [SerializeField] private GameObject[] timers = new GameObject[2]; // drag items in the inspector
+    [SerializeField] private int timerInterval;
+    [SerializeField] private int spawnTimer;
     [SerializeField] private bool gameActive;
     [SerializeField] private float fruitSpawnPerSecond; // delay between fruit spawns (seconds)
 
@@ -12,10 +15,12 @@ public class FoodSpawning : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        timerInterval = Random.Range(5, 10);
         fruitSpawnPerSecond = 1.5f;
         gameActive = true;
         StartCoroutine(SpawnFruit()); // main food spawn
         StartCoroutine(FixedFruit()); // fixed food spawn
+        StartCoroutine(timeSpawner()); // timer spawners
     }
 
     
@@ -25,6 +30,15 @@ public class FoodSpawning : MonoBehaviour
 
     }
 
+    IEnumerator timeSpawner()
+    {
+        yield return new WaitForSeconds(timerInterval);
+
+        Instantiate(timers[Random.Range(0, timers.Length)], new Vector2(Random.Range(-8.3f, 8.5f), 6f), Quaternion.identity);
+
+        timerInterval = Random.Range(5, 10);
+        StartCoroutine(timeSpawner()); // timer spawners
+    }
     IEnumerator FixedFruit() // fixed food spawns
     {
         //Debug.Log("spawning fixed food."); 
@@ -57,7 +71,7 @@ public class FoodSpawning : MonoBehaviour
 
     public void DifficultyLoop() // difficulty loop 
     {
-        if (fruitSpawnPerSecond > 1f) // value = max speed of spawn rate e.g. every 1s
+        if (fruitSpawnPerSecond >= 1f) // value = max speed of spawn rate e.g. every 1s
         {
             fruitSpawnPerSecond -= 0.025f; // reduces cooldown on spawnrate
         }
