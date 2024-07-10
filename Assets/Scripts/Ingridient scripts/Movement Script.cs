@@ -9,13 +9,15 @@ public class MovementScript : MonoBehaviour
     public float speed = 5;
     public bool onFloor = true;
     public SpriteRenderer spriteRenderer;
+    public bool facingRight = true;
     // Start is called before the first frame update
     void Start()
     {
-        Collider2D collider = GetComponent<Collider2D>();
         SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
         // gettings the rigidbody2d components necessary for the jumping
         rb2d = GetComponent<Rigidbody2D>();
+
+        speed = 200f;
 
         // checks if the rigidbody2d componenets are applied, if not it returns a debug log
         if (rb2d == null)
@@ -30,20 +32,62 @@ public class MovementScript : MonoBehaviour
         // pressing d will move the player right
         if (Input.GetKey(KeyCode.D))
         {
-            //transform.Translate(Vector2.right * speed * Time.deltaTime);
             rb2d.AddForce(Vector2.right * speed); //* Time.deltaTime);
-            //spriteRenderer.flipX = false; // keep if want to flip
 
+            spriteRenderer.flipX = false; // keep if want to flip
+
+            facingRight = true;
+
+            ColliderAdjustRight();
         }
 
         // pressing a will move the player left
         if (Input.GetKey(KeyCode.A))
         {
-            //transform.Translate(Vector2.left * speed * Time.deltaTime);
             rb2d.AddForce(Vector2.left * speed);// * Time.deltaTime);
-            //spriteRenderer.flipX = true; // keep if want to flip
+
+            //transform.Translate(Vector2.left * speed * Time.deltaTime);
+
+            spriteRenderer.flipX = true; // keep if want to flip
+
             //collider.offset = new Vector2(-collider.offset.x, collider.offset.y);
+
+            ColliderAdjustLeft();
+
+            facingRight = false;
         }
 
+    }
+
+    void ColliderAdjustLeft()
+    {
+        Collider2D collider = GetComponent<Collider2D>();
+
+
+        if (collider != null)
+        {
+            if (facingRight == false)
+            {
+                // Flip the collider's offset horizontally
+                Vector2 newOffset = collider.offset;
+                newOffset.x = 1;
+                collider.offset = newOffset;
+            }
+        }
+    }
+
+    void ColliderAdjustRight()
+    {
+        Collider2D collider = GetComponent<Collider2D>();
+        if (collider != null)
+        {
+            if (facingRight == true)
+            {
+                // Flip the collider's offset horizontally
+                Vector2 newOffset = collider.offset;
+                newOffset.x = -1;
+                collider.offset = newOffset;
+            }
+        }
     }
 }

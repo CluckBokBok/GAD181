@@ -659,6 +659,7 @@ GameObject:
   - component: {fileID: 317984086}
   - component: {fileID: 317984087}
   - component: {fileID: 317984088}
+  - component: {fileID: 317984089}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -820,6 +821,7 @@ MonoBehaviour:
   speed: 200
   onFloor: 1
   spriteRenderer: {fileID: 317984083}
+  facingRight: 1
 --- !u!114 &317984088
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -838,6 +840,19 @@ MonoBehaviour:
   foodPicked: 0
   timeAdd: 0
   timeRemove: 0
+--- !u!114 &317984089
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 317984082}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d252a34227539240a244d89217a9415, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movingScript: {fileID: 317984087}
 --- !u!1 &470248267
 GameObject:
   m_ObjectHideFlags: 0
