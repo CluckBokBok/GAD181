@@ -18,8 +18,8 @@ public class PlayerGrabber : MonoBehaviour
     {
         FoodInfo = FindAnyObjectByType<FoodInfo>();
         ingredientTimer = FindAnyObjectByType<Countdown>();
-        timeAdd = 3;
-        timeRemove = -3;
+        timeAdd = 15;
+        timeRemove = -20;
         Time.timeScale = 1f; // game speed
     }
 
