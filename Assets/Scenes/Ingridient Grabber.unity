@@ -1022,11 +1022,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 411eb6e8ce3dc18418a302c5d9d1bb92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeCountdown: 10
+  scoreSet: 0
+  platformGame: 1
+  timeCountdown: 45
   countingDown: 0
   timerText: {fileID: 470248269}
+  playerHighScore: {fileID: 0}
   LevelFail: {fileID: 0}
-  timeToCountdown: 45
+  timeToCountdown: 10
+  playerCurrentScore: {fileID: 145486242}
 --- !u!114 &470248269
 MonoBehaviour:
   m_ObjectHideFlags: 0

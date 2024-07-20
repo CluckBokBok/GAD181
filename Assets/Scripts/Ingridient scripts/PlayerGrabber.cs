@@ -26,7 +26,7 @@ public class PlayerGrabber : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (ingredientTimer.GetComponent<Countdown>().timeCountdown <= 0)
+        if (ingredientTimer.GetComponent<Countdown>().timeCountdown <= 0) // when counter reaches 0 or less
         {
             LoadNextScene(0);
         }
@@ -40,28 +40,24 @@ public class PlayerGrabber : MonoBehaviour
             Destroy(touched.gameObject);
         }
 
-        if (touched.gameObject.CompareTag("Bad Timer"))
+        if (touched.gameObject.CompareTag("Bad Timer")) // when picking up bad time
         {
-            ingredientTimer.GetComponent<Countdown>().timeCountdown += timeRemove;
+            ingredientTimer.GetComponent<Countdown>().timeCountdown += timeRemove; // removes time from countdown
 
             DestroyFood();
         }
 
-        else if (touched.gameObject.CompareTag("Good Timer"))
+        else if (touched.gameObject.CompareTag("Good Timer")) // when picking up good time 
         {
-            ingredientTimer.GetComponent<Countdown>().timeCountdown += timeAdd;
+            ingredientTimer.GetComponent<Countdown>().timeCountdown += timeAdd; // adds time to countdown
 
             DestroyFood();
         }
 
-        else if (touched.gameObject.CompareTag("GFood"))
+        else if (touched.gameObject.CompareTag("GFood")) // when picking up basic food
         {
-            Debug.Log("You picked up " + touched.GetComponent<FoodInfo>().foodName + "!");
-            scoreHolder.playerScore += 1; 
-
-            // ingredientTimer.GetComponent<Countdown>().timeCountdown += timeRemove;
-
-
+            Debug.Log("You picked up " + touched.GetComponent<FoodInfo>().foodName + "!"); // debug food grabbed
+            scoreHolder.playerScore += 1; // adds score to the player's score
 
             DestroyFood(); // used to destroy
         }

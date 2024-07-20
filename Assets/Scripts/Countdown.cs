@@ -6,17 +6,20 @@ using TMPro;
 
 public class Countdown : MonoBehaviour
 {
+    public int scoreSet = 0;
+    public bool platformGame; // set true in inspector for platform game
     public int timeCountdown;
     public bool countingDown;
     public TextMeshProUGUI timerText; // timer UI
+    public TextMeshProUGUI playerHighScore; // Player's highscore
     public GameObject LevelFail; // fail UI
     public int timeToCountdown; // change in inspector for timer duration
+    public ScoreHolder playerCurrentScore; // player score script
     
 
     // Start is called before the first frame update
     void Start()
     {
-       
         timeCountdown = timeToCountdown;
         countingDown = true;
         StartCoroutine(timerStart()); // starts timer
@@ -38,21 +41,23 @@ public class Countdown : MonoBehaviour
     {
 
         countingDown = true;
-        while (timeCountdown > 0 && countingDown == true)
+        while (timeCountdown > 0 && countingDown == true) // counting down
         {
             timerText.text = timeCountdown.ToString();
             yield return new WaitForSeconds(1f);
             timeCountdown--;
         }
 
-        if (timeCountdown <= 0) 
+        if (timeCountdown <= 0) // when countdown is 0 or less
         {
             yield return new WaitForSeconds(1f);
             timerText.gameObject.SetActive(false);
 
             if (LevelFail != null)
             {
+                
                 LevelFail.SetActive(true);
+
             }
 
 
