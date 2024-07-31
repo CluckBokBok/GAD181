@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using JetBrains.Annotations;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -9,6 +10,7 @@ public class PlayerGrabber : MonoBehaviour
     public FoodInfo FoodInfo;
     public Countdown ingredientTimer;
     public ScoreHolder scoreHolder;
+    [SerializeField] public GameObject LevelPass;
     [SerializeField] private bool foodPicked;
     [SerializeField] private int timeAdd;
     [SerializeField] private int timeRemove;
@@ -18,6 +20,7 @@ public class PlayerGrabber : MonoBehaviour
     {
         FoodInfo = FindAnyObjectByType<FoodInfo>();
         ingredientTimer = FindAnyObjectByType<Countdown>();
+       
         timeAdd = 15;
         timeRemove = -20;
         Time.timeScale = 1f; // game speed
@@ -28,7 +31,8 @@ public class PlayerGrabber : MonoBehaviour
     {
         if (ingredientTimer.GetComponent<Countdown>().timeCountdown <= 0) // when counter reaches 0 or less
         {
-            LoadNextScene(0);
+            //LoadNextScene(0);
+            LevelPass.SetActive(true);
         }
     }
 
