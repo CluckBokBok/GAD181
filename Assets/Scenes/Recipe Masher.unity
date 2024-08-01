@@ -738,9 +738,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d654494905e5a24cb20408ee398b220, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerIngredientsRef: {fileID: 4339063}
-  recipeIngredientsRef: {fileID: 654700337}
-  lilTrolling: {fileID: 860017476}
+  pIR: {fileID: 4339063}
+  rIR: {fileID: 654700337}
+  wajajaCat: {fileID: 860017476}
 --- !u!1 &288873004
 GameObject:
   m_ObjectHideFlags: 0
@@ -3383,7 +3383,7 @@ GameObject:
   - component: {fileID: 860017478}
   - component: {fileID: 860017477}
   m_Layer: 0
-  m_Name: Wajaja (Remove Later)
+  m_Name: Wajaja
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6425,7 +6425,7 @@ SpriteRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1658146980}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1

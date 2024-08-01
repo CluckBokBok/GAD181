@@ -28,7 +28,17 @@ namespace SAE.GAD181.Game3
 
         void Update()
         {
+            #region
+            if (Input.GetKeyDown(KeyCode.Alpha1)) // 1
+            {
+                NicksRecipe();
+            }
 
+            if (Input.GetKeyDown(KeyCode.Alpha2)) // 2
+            {
+                TestRecipe();
+            }
+            #endregion
         }
 
         #region Set Recipes
@@ -43,7 +53,10 @@ namespace SAE.GAD181.Game3
 
         public void TestRecipe() // can delete this
         {
-
+            currentRecipeBread = 10;
+            currentRecipeCarrot = 5;
+            currentRecipeTomato = 1;
+            currentRecipePotato = 3;
         }
 
         #endregion

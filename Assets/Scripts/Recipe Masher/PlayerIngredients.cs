@@ -36,6 +36,7 @@ namespace SAE.GAD181.Game3
         public void AddPlayerBread(int amount)
         {
             currentPlayerBread += amount;
+
         }
 
         public void AddPlayerCarrot(int amount)

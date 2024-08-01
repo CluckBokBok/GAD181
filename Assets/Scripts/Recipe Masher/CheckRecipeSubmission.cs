@@ -10,10 +10,10 @@ namespace SAE.GAD181.Game3
 
     public class CheckRecipeSubmission : MonoBehaviour
     {
-        public PlayerIngredients playerIngredientsRef;
-        public SetRecipes recipeIngredientsRef;
+        public PlayerIngredients pIR; // player ingredient reference
+        public SetRecipes rIR; // recipe ingredient referece
 
-        public GameObject lilTrolling; // remove this later (:
+        public GameObject wajajaCat; // cat laughing at you
 
         void Start()
         {
@@ -29,12 +29,12 @@ namespace SAE.GAD181.Game3
         public void ObjectReferenceCheck() // objects that get checked for null 
         {
             #region Objects To Check For Null
-            if (playerIngredientsRef == null)
+            if (pIR == null)
             {
                 Debug.Log("PlayerIngredients missing");
             }
 
-            if (recipeIngredientsRef == null)
+            if (rIR == null)
             {
                 Debug.Log("RecipeIngredients missing");
             }
@@ -52,16 +52,16 @@ namespace SAE.GAD181.Game3
             // Debug.Log("This is: " + name); // debug object name
             Debug.Log("xdd"); // xdd
 
-            if (playerIngredientsRef.currentPlayerBread == recipeIngredientsRef.currentRecipeBread && playerIngredientsRef.currentPlayerCarrot == recipeIngredientsRef.currentRecipeCarrot && playerIngredientsRef.currentPlayerTomato == recipeIngredientsRef.currentRecipeTomato && playerIngredientsRef.currentPlayerPotato == recipeIngredientsRef.currentRecipePotato)
+            if (pIR.currentPlayerBread == rIR.currentRecipeBread && pIR.currentPlayerCarrot == rIR.currentRecipeCarrot && pIR.currentPlayerTomato == rIR.currentRecipeTomato && pIR.currentPlayerPotato == rIR.currentRecipePotato)
             {
                 Debug.Log("Correct!");
-                lilTrolling.SetActive(false);
+                wajajaCat.SetActive(false);
             }
 
             else
             {
                 Debug.Log("Wrong!");
-                lilTrolling.SetActive(true); // remove this later (:
+                wajajaCat.SetActive(true); // cat laughing at you
             }
 
         }
