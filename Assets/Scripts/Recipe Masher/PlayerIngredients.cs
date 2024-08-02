@@ -22,12 +22,21 @@ namespace SAE.GAD181.Game3
 
         void Start()
         {
-
+           
         }
 
         void Update()
         {
 
+        }
+
+        // add all ingredients here and make them = 0
+        public void ResetPlayerIngredients() // resets player ingredient count
+        {
+            currentPlayerBread = 0;
+            currentPlayerCarrot = 0;
+            currentPlayerTomato = 0;
+            currentPlayerPotato = 0;
         }
 
         // changes the value of the current player ingredients

@@ -50,18 +50,23 @@ namespace SAE.GAD181.Game3
         public void RecipeSubmissionCheck()
         {
             // Debug.Log("This is: " + name); // debug object name
-            Debug.Log("xdd"); // xdd
+            // Debug.Log("xdd"); // xdd
 
             if (pIR.currentPlayerBread == rIR.currentRecipeBread && pIR.currentPlayerCarrot == rIR.currentRecipeCarrot && pIR.currentPlayerTomato == rIR.currentRecipeTomato && pIR.currentPlayerPotato == rIR.currentRecipePotato)
             {
                 Debug.Log("Correct!");
-                wajajaCat.SetActive(false);
+
+                wajajaCat.SetActive(false); // turn off wajaja cat - should realistically turn off on itself
+
+                pIR.ResetPlayerIngredients();
+                rIR.ChangeRecipe();
             }
 
             else
             {
                 Debug.Log("Wrong!");
                 wajajaCat.SetActive(true); // cat laughing at you
+                
             }
 
         }
