@@ -18,6 +18,11 @@ TagManager:
   - GFood
   - Good Timer
   - Bad Timer
+  - PlateZone
+  - Bread
+  - Tomato
+  - Potato
+  - Carrot
   layers:
   - Default
   - TransparentFX
@@ -26,7 +31,7 @@ TagManager:
   - Water
   - UI
   - UI BG Elements
-  - 
+  - Test
   - 
   - 
   - 
