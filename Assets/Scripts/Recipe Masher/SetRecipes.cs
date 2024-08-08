@@ -41,6 +41,7 @@ namespace SAE.GAD181.Game3
             #endregion
         }
 
+        // this is the selection of recipes that can be picked randomly
         #region Recipe Change
         public void ChangeRecipe() // changes the current recipe - this functions requires consistent changing depending on the amount of recipes
         {
