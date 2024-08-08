@@ -13,10 +13,22 @@ namespace SAE.GAD181.Game3
 
         #region Variables
 
-        public int currentPlayerBread = 0; // player bread
-        public int currentPlayerCarrot = 0; // player carrot
-        public int currentPlayerTomato = 0; // player tomato
-        public int currentPlayerPotato = 0; // player potato
+        public int currentPlayerBread = 0; // player - bread
+        public int currentPlayerCarrot = 0; // player - carrot
+        public int currentPlayerTomato = 0; // player - tomato
+        public int currentPlayerPotato = 0; // player - potato
+        public int currentPlayerBrocolli = 0; // player - brocolli
+        public int currentPlayerCheese = 0; // player - cheese
+        public int currentPlayerSausage = 0; // player - sausage
+        public int currentPlayerMushroom = 0; // player - mushroom
+        public int currentPlayerTBone = 0; // player - t bone
+        public int currentPlayerBacon = 0; // player - bacon
+        public int currentPlayerEgg = 0; // player - egg
+        public int currentPlayerFish = 0; // player - fish
+        public int currentPlayerFlour = 0; // player - flour
+        public int currentPlayerSugar = 0; // player - sugar
+        public int currentPlayerPasta = 0; // player - pasta
+        public int currentPlayerMilk = 0; // player - milk
 
         #endregion
 
@@ -37,6 +49,18 @@ namespace SAE.GAD181.Game3
             currentPlayerCarrot = 0;
             currentPlayerTomato = 0;
             currentPlayerPotato = 0;
+            currentPlayerBrocolli = 0; 
+            currentPlayerCheese = 0; 
+            currentPlayerSausage = 0;
+            currentPlayerMushroom = 0; 
+            currentPlayerTBone = 0;
+            currentPlayerBacon = 0; 
+            currentPlayerEgg = 0; 
+            currentPlayerFish = 0; 
+            currentPlayerFlour = 0; 
+            currentPlayerSugar = 0; 
+            currentPlayerPasta = 0; 
+            currentPlayerMilk = 0; 
         }
 
         // changes the value of the current player ingredients
@@ -62,6 +86,68 @@ namespace SAE.GAD181.Game3
         {
             currentPlayerPotato += amount;
         }
+
+        public void AddPlayerBrocolli(int amount)
+        {
+            currentPlayerBrocolli += amount;
+        }
+
+        public void AddPlayerCheese(int amount)
+        {
+            currentPlayerCheese += amount;
+        }
+
+        public void AddPlayerSausage(int amount)
+        {
+            currentPlayerSausage += amount;
+        }
+
+        public void AddPlayerMushroom(int amount)
+        {
+            currentPlayerMushroom += amount;
+        }
+
+        public void AddPlayerTBone(int amount)
+        {
+            currentPlayerTBone += amount;
+        }
+
+        public void AddPlayerBacon(int amount)
+        {
+            currentPlayerBacon += amount;
+        }
+
+        public void AddPlayerEgg(int amount)
+        {
+            currentPlayerEgg += amount;
+        }
+
+        public void AddPlayerFish(int amount)
+        {
+            currentPlayerFish += amount;
+        }
+
+        public void AddPlayerFlour(int amount)
+        {
+            currentPlayerFlour += amount;
+        }
+
+        public void AddPlayerSugar(int amount)
+        {
+            currentPlayerSugar += amount;
+        }
+
+        public void AddPlayerPasta(int amount)
+        {
+            currentPlayerPasta += amount;
+        }
+
+        public void AddPlayerMilk(int amount)
+        {
+            currentPlayerMilk += amount;
+        }
+
+
 
         #endregion
 

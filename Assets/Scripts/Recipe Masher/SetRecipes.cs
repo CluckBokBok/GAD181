@@ -16,10 +16,22 @@ namespace SAE.GAD181.Game3
         [SerializeField] private int recipeIndex; // number of recipes
         [SerializeField] private int recipeDifficulty; // recipe difficulty easy, medium, hard 
 
-        public int currentRecipeBread = 0; // current recipe bread
-        public int currentRecipeCarrot = 0; // current recipe carrot
-        public int currentRecipeTomato = 0; // current recipe tomato
-        public int currentRecipePotato = 0; // current recipe potato
+        public int currentRecipeBread = 0; // current recipe - bread
+        public int currentRecipeCarrot = 0; // current recipe - carrot
+        public int currentRecipeTomato = 0; // current recipe - tomato
+        public int currentRecipePotato = 0; // current recipe - potato
+        public int currentRecipeBrocolli = 0; // current recipe - brocolli
+        public int currentRecipeCheese = 0; // current recipe - cheese
+        public int currentRecipeSausage = 0; // current recipe - sausage
+        public int currentRecipeMushroom = 0; // current recipe - mushroom
+        public int currentRecipeTBone = 0; // current recipe - t bone
+        public int currentRecipeBacon = 0; // current recipe - bacon
+        public int currentRecipeEgg = 0; // current recipe - egg
+        public int currentRecipeFish = 0; // current recipe - fish
+        public int currentRecipeFlour = 0; // current recipe - flour
+        public int currentRecipeSugar = 0; // current recipe - sugar
+        public int currentRecipePasta = 0; // current recipe - pasta
+        public int currentRecipeMilk = 0; // current recipe - milk
 
         #endregion
 
