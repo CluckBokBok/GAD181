@@ -17,7 +17,7 @@ namespace SAE.GAD181.Game3
         public int currentPlayerCarrot = 0; // player - carrot
         public int currentPlayerTomato = 0; // player - tomato
         public int currentPlayerPotato = 0; // player - potato
-        public int currentPlayerBrocolli = 0; // player - brocolli
+        public int currentPlayerBroccoli = 0; // player - brocolli
         public int currentPlayerCheese = 0; // player - cheese
         public int currentPlayerSausage = 0; // player - sausage
         public int currentPlayerMushroom = 0; // player - mushroom
@@ -49,7 +49,7 @@ namespace SAE.GAD181.Game3
             currentPlayerCarrot = 0;
             currentPlayerTomato = 0;
             currentPlayerPotato = 0;
-            currentPlayerBrocolli = 0; 
+            currentPlayerBroccoli = 0; 
             currentPlayerCheese = 0; 
             currentPlayerSausage = 0;
             currentPlayerMushroom = 0; 
@@ -89,7 +89,7 @@ namespace SAE.GAD181.Game3
 
         public void AddPlayerBrocolli(int amount)
         {
-            currentPlayerBrocolli += amount;
+            currentPlayerBroccoli += amount;
         }
 
         public void AddPlayerCheese(int amount)

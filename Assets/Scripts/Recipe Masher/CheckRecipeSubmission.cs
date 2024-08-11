@@ -49,10 +49,8 @@ namespace SAE.GAD181.Game3
 
         public void RecipeSubmissionCheck()
         {
-            // Debug.Log("This is: " + name); // debug object name
-            // Debug.Log("xdd"); // xdd
 
-            if (pIR.currentPlayerBread == rIR.currentRecipeBread && pIR.currentPlayerCarrot == rIR.currentRecipeCarrot && pIR.currentPlayerTomato == rIR.currentRecipeTomato && pIR.currentPlayerPotato == rIR.currentRecipePotato && pIR.currentPlayerBrocolli == rIR.currentRecipeBrocolli && pIR.currentPlayerCheese == rIR.currentRecipeCheese && pIR.currentPlayerSausage == rIR.currentRecipeSausage && pIR.currentPlayerMushroom == rIR.currentRecipeMushroom && pIR.currentPlayerTBone == rIR.currentRecipeTBone && pIR.currentPlayerBacon == rIR.currentRecipeBacon && pIR.currentPlayerEgg == rIR.currentRecipeEgg && pIR.currentPlayerFish == rIR.currentRecipeFish && pIR.currentPlayerFlour == rIR.currentRecipeFlour && pIR.currentPlayerSugar == rIR.currentRecipeSugar && pIR.currentPlayerPasta == rIR.currentRecipePasta && pIR.currentPlayerMilk == rIR.currentRecipeMilk)
+            if (pIR.currentPlayerBread == rIR.currentRecipeBread && pIR.currentPlayerCarrot == rIR.currentRecipeCarrot && pIR.currentPlayerTomato == rIR.currentRecipeTomato && pIR.currentPlayerPotato == rIR.currentRecipePotato && pIR.currentPlayerBroccoli == rIR.currentRecipeBroccoli && pIR.currentPlayerCheese == rIR.currentRecipeCheese && pIR.currentPlayerSausage == rIR.currentRecipeSausage && pIR.currentPlayerMushroom == rIR.currentRecipeMushroom && pIR.currentPlayerTBone == rIR.currentRecipeTBone && pIR.currentPlayerBacon == rIR.currentRecipeBacon && pIR.currentPlayerEgg == rIR.currentRecipeEgg && pIR.currentPlayerFish == rIR.currentRecipeFish && pIR.currentPlayerFlour == rIR.currentRecipeFlour && pIR.currentPlayerSugar == rIR.currentRecipeSugar && pIR.currentPlayerPasta == rIR.currentRecipePasta && pIR.currentPlayerMilk == rIR.currentRecipeMilk)
             {
                
                 Debug.Log("Correct!");
