@@ -82,7 +82,7 @@ public class DragAndDrop : MonoBehaviour
                 //newlySpawnedObject.GetComponent<Rigidbody2D>().AddTorque(transform.rotation.z * 1000000); - trying to make the object spin still work in progress
 
                 newlySpawnedObject.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
-                newlySpawnedObject.GetComponent<CapsuleCollider2D>().isTrigger = false;
+                newlySpawnedObject.GetComponent<CircleCollider2D>().isTrigger = false;
 
                 if (droppedIngredient == "Bread")
                 {
@@ -107,6 +107,78 @@ public class DragAndDrop : MonoBehaviour
                     Debug.Log("The Carrot is in the plate");
                     spawnedIngredientHolderReference.carrotHolder.Add(newlySpawnedObject);
                     PlayerIngredientsReference.AddPlayerCarrot(1);
+                }
+                else if(droppedIngredient == "Flour")
+                {
+                    Debug.Log("The Flour is in the plate");
+                    spawnedIngredientHolderReference.carrotHolder.Add(newlySpawnedObject);
+                    PlayerIngredientsReference.AddPlayerFlour(1);
+                }
+                else if (droppedIngredient == "Sugar")
+                {
+                    Debug.Log("The Sugar is in the plate");
+                    spawnedIngredientHolderReference.carrotHolder.Add(newlySpawnedObject);
+                    PlayerIngredientsReference.AddPlayerSugar(1);
+                }
+                else if (droppedIngredient == "Pasta")
+                {
+                    Debug.Log("The Pasta is in the plate");
+                    spawnedIngredientHolderReference.carrotHolder.Add(newlySpawnedObject);
+                    PlayerIngredientsReference.AddPlayerPasta(1);
+                }
+                else if (droppedIngredient == "Broccoli")
+                {
+                    Debug.Log("The Broccoli is in the plate");
+                    spawnedIngredientHolderReference.carrotHolder.Add(newlySpawnedObject);
+                    PlayerIngredientsReference.AddPlayerBrocolli(1);
+                }
+                else if (droppedIngredient == "Mushroom")
+                {
+                    Debug.Log("The Mushroom is in the plate");
+                    spawnedIngredientHolderReference.carrotHolder.Add(newlySpawnedObject);
+                    PlayerIngredientsReference.AddPlayerMushroom(1);
+                }
+                else if (droppedIngredient == "Sausage")
+                {
+                    Debug.Log("The Sausage is in the plate");
+                    spawnedIngredientHolderReference.carrotHolder.Add(newlySpawnedObject);
+                    PlayerIngredientsReference.AddPlayerSausage(1);
+                }
+                else if (droppedIngredient == "Tbone")
+                {
+                    Debug.Log("The Tbone is in the plate");
+                    spawnedIngredientHolderReference.carrotHolder.Add(newlySpawnedObject);
+                    PlayerIngredientsReference.AddPlayerTBone(1);
+                }
+                else if (droppedIngredient == "Bacon")
+                {
+                    Debug.Log("The Bacon is in the plate");
+                    spawnedIngredientHolderReference.carrotHolder.Add(newlySpawnedObject);
+                    PlayerIngredientsReference.AddPlayerBacon(1);
+                }
+                else if (droppedIngredient == "Fish")
+                {
+                    Debug.Log("The Fish is in the plate");
+                    spawnedIngredientHolderReference.carrotHolder.Add(newlySpawnedObject);
+                    PlayerIngredientsReference.AddPlayerFish(1);
+                }
+                else if (droppedIngredient == "Milk")
+                {
+                    Debug.Log("The Milk is in the plate");
+                    spawnedIngredientHolderReference.carrotHolder.Add(newlySpawnedObject);
+                    PlayerIngredientsReference.AddPlayerMilk(1);
+                }
+                else if (droppedIngredient == "Egg")
+                {
+                    Debug.Log("The Egg is in the plate");
+                    spawnedIngredientHolderReference.carrotHolder.Add(newlySpawnedObject);
+                    PlayerIngredientsReference.AddPlayerEgg(1);
+                }
+                else if (droppedIngredient == "Cheese")
+                {
+                    Debug.Log("The Cheese is in the plate");
+                    spawnedIngredientHolderReference.carrotHolder.Add(newlySpawnedObject);
+                    PlayerIngredientsReference.AddPlayerCheese(1);
                 }
 
                 break;

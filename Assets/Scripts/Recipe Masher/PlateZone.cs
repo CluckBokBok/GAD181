@@ -34,5 +34,53 @@ public class PlateZone : MonoBehaviour
         {
             Debug.Log("Carrot is hovered over the plate zone");
         }
+        if (ingredient.CompareTag("Flour"))
+        {
+            Debug.Log("Flour is hovered over the plate zone");
+        }
+        if (ingredient.CompareTag("Sugar"))
+        {
+            Debug.Log("Sugar is hovered over the plate zone");
+        }
+        if (ingredient.CompareTag("Pasta"))
+        {
+            Debug.Log("Pasta is hovered over the plate zone");
+        }
+        if (ingredient.CompareTag("Broccoli"))
+        {
+            Debug.Log("Broccoli is hovered over the plate zone");
+        }
+        if (ingredient.CompareTag("Mushroom"))
+        {
+            Debug.Log("Mushroom is hovered over the plate zone");
+        }
+        if (ingredient.CompareTag("Sausage"))
+        {
+            Debug.Log("Sausage is hovered over the plate zone");
+        }
+        if (ingredient.CompareTag("Tbone"))
+        {
+            Debug.Log("Tbone is hovered over the plate zone");
+        }
+        if (ingredient.CompareTag("Bacon"))
+        {
+            Debug.Log("Bacon is hovered over the plate zone");
+        }
+        if (ingredient.CompareTag("Fish"))
+        {
+            Debug.Log("Fish is hovered over the plate zone");
+        }
+        if (ingredient.CompareTag("Milk"))
+        {
+            Debug.Log("Milk is hovered over the plate zone");
+        }
+        if (ingredient.CompareTag("Egg"))
+        {
+            Debug.Log("Egg is hovered over the plate zone");
+        }
+        if (ingredient.CompareTag("Cheese"))
+        {
+            Debug.Log("Cheese is hovered over the plate zone");
+        }
     }
 }

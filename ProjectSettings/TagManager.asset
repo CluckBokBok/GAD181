@@ -23,6 +23,18 @@ TagManager:
   - Tomato
   - Potato
   - Carrot
+  - Milk
+  - Flour
+  - Egg
+  - Sausage
+  - Tbone
+  - Fish
+  - Bacon
+  - Cheese
+  - Mushroom
+  - Broccoli
+  - Pasta
+  - Sugar
   layers:
   - Default
   - TransparentFX
