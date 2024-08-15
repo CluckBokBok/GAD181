@@ -201,6 +201,27 @@ namespace SAE.GAD181.Game3
 
         #endregion
 
+        public void ResetRecipeIngredients() // resets recipe ingredients
+        {
+
+            currentRecipeBread = 0; 
+            currentRecipeCarrot = 0; 
+            currentRecipeTomato = 0; 
+            currentRecipePotato = 0; 
+            currentRecipeBroccoli = 0; 
+            currentRecipeCheese = 0; 
+            currentRecipeSausage = 0; 
+            currentRecipeMushroom = 0; 
+            currentRecipeTBone = 0; 
+            currentRecipeBacon = 0; 
+            currentRecipeEgg = 0; 
+            currentRecipeFish = 0; 
+            currentRecipeFlour = 0; 
+            currentRecipeSugar = 0;
+            currentRecipePasta = 0;
+            currentRecipeMilk = 0;
+           
+        }
 
     }
 }
