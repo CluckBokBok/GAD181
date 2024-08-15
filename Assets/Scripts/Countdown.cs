@@ -72,5 +72,10 @@ public class Countdown : MonoBehaviour
         StartCoroutine(timerStart());
         Debug.Log("resumed timer");
     }
-        
+
+    public void AddTime (int seconds)
+    {
+        timeCountdown += seconds;
+        timerText.text = timeCountdown.ToString();
+    }
 }
