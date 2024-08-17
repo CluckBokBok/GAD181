@@ -20,4 +20,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Recipe Masher.unity
     guid: 27d55eba0d20a3f4cb892eb68f075cea
+  - enabled: 1
+    path: Assets/Scenes/Platformer Level 2.unity
+    guid: 343233766d3ee264a85064fbc4ade48c
+  - enabled: 1
+    path: Assets/Scenes/Platformer Level 3.unity
+    guid: 468dfd52dabe8cb49965e069432e81bc
   m_configObjects: {}

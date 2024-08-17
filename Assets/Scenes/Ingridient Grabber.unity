@@ -1135,7 +1135,7 @@ MonoBehaviour:
   timerText: {fileID: 470248269}
   playerHighScore: {fileID: 0}
   LevelFail: {fileID: 1587170102}
-  timeToCountdown: 10
+  timeToCountdown: 30
   playerCurrentScore: {fileID: 145486242}
 --- !u!114 &470248269
 MonoBehaviour:

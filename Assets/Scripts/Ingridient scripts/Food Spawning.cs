@@ -73,7 +73,7 @@ public class FoodSpawning : MonoBehaviour
     {
         if (fruitSpawnPerSecond >= 1f) // value = max speed of spawn rate e.g. every 1s
         {
-            fruitSpawnPerSecond -= 0.025f; // reduces cooldown on spawnrate
+            fruitSpawnPerSecond -= 0.050f; // reduces cooldown on spawnrate
         }
         
 

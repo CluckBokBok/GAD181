@@ -21,7 +21,7 @@ public class PlayerGrabber : MonoBehaviour
         FoodInfo = FindAnyObjectByType<FoodInfo>();
         ingredientTimer = FindAnyObjectByType<Countdown>();
        
-        timeAdd = 15;
+        timeAdd = 10;
         timeRemove = -20;
         Time.timeScale = 1f; // game speed
     }

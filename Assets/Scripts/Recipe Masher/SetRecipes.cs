@@ -53,7 +53,7 @@ namespace SAE.GAD181.Game3
             recipeDifficulty = Random.Range(1, 11);
 
             #region Easy Recipes
-            if (recipeDifficulty >= 1 && recipeDifficulty <= 6) // easy recipes - 60% chance
+            if (recipeDifficulty >= 1 && recipeDifficulty <= 4) // easy recipes - 60% chance
             {
                 //Debug.Log("easy recipe");
                 recipeIndex = Random.Range(1, 4); // second number should be amount of recipes + 1 for overload
@@ -77,7 +77,7 @@ namespace SAE.GAD181.Game3
             #endregion
 
             #region Medium Recipes
-            if (recipeDifficulty >= 7 && recipeDifficulty <= 9) // medium recipes
+            if (recipeDifficulty >= 5 && recipeDifficulty <= 8) // medium recipes
             {
                 //Debug.Log("medium recipe");
                 recipeIndex = Random.Range(1, 4); // second number should be amount of recipes + 1 for overload
@@ -101,7 +101,7 @@ namespace SAE.GAD181.Game3
             #endregion
 
             #region Hard Recipes
-            if (recipeDifficulty == 10) // hard recipes
+            if (recipeDifficulty >= 9 && recipeDifficulty <= 10) // hard recipes
             {
                 //Debug.Log("hard recipe");
                 recipeIndex = Random.Range(1, 4); // second number should be amount of recipes + 1 for overload

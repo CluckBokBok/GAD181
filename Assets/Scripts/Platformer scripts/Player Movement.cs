@@ -8,6 +8,8 @@ public class PlayerMovement : MonoBehaviour
     public float speed = 5;
     public float jumpHeight = 5f;
     public bool onFloor = true;
+    public bool facingRight = true;
+    public SpriteRenderer spriteRenderer;
 
     // Start is called before the first frame update
     void Start()
@@ -29,12 +31,24 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKey(KeyCode.D))
         {
             transform.Translate(Vector2.right * speed * Time.deltaTime);
+            spriteRenderer.flipX = false; // keep if want to flip
+
+            facingRight = true;
+
+            ColliderAdjustRight();
         }
 
         // pressing a will move the player left
         if (Input.GetKey(KeyCode.A))
         {
             transform.Translate(Vector2.left * speed * Time.deltaTime);
+            spriteRenderer.flipX = true; // keep if want to flip
+
+            //collider.offset = new Vector2(-collider.offset.x, collider.offset.y);
+
+            ColliderAdjustLeft();
+
+            facingRight = false;
         }
 
         // pressing space while the player is touching the floor will result in a jump
@@ -51,6 +65,38 @@ public class PlayerMovement : MonoBehaviour
         {
             onFloor = true;
             Debug.Log("player has hit the floor");
+        }
+    }
+
+    void ColliderAdjustLeft()
+    {
+        Collider2D collider = GetComponent<Collider2D>();
+
+
+        if (collider != null)
+        {
+            if (facingRight == false)
+            {
+                // Flip the collider's offset horizontally
+                Vector2 newOffset = collider.offset;
+                newOffset.x = 1;
+                collider.offset = newOffset;
+            }
+        }
+    }
+
+    void ColliderAdjustRight()
+    {
+        Collider2D collider = GetComponent<Collider2D>();
+        if (collider != null)
+        {
+            if (facingRight == true)
+            {
+                // Flip the collider's offset horizontally
+                Vector2 newOffset = collider.offset;
+                newOffset.x = -1;
+                collider.offset = newOffset;
+            }
         }
     }
 }
